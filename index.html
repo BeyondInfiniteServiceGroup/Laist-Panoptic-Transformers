@@ -66,11 +66,19 @@
     <main>
         <section class="hero">
             <div class="hero-media" aria-hidden="true">
-                <img
-                    src="./assets/images/hero.jpeg"
-                    alt=""
-                    fetchpriority="high"
+                <video
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                    preload="metadata"
+                    poster="./assets/images/hero.jpeg"
                 >
+                    <source
+                        src="./assets/images/hero.mp4"
+                        type="video/mp4"
+                    >
+                </video>
             </div>
 
             <div class="container hero-content reveal">

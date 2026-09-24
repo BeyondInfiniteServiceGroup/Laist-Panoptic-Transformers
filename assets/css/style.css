@@ -26,8 +26,9 @@ body {
 }
 
 img {
+    display: block;
     max-width: 100%;
-    display: block
+    height: auto;
 }
 
 a {
@@ -153,8 +154,9 @@ textarea {
 .hero-media img {
     width: 100%;
     height: 100%;
+    display: block;
     object-fit: cover;
-    object-position: center;
+    object-position: 40% center;
 }
 
 
@@ -311,16 +313,19 @@ textarea {
 }
 
 .image-frame {
+    position: relative;
     width: 100%;
+    aspect-ratio: 4 / 3;
     overflow: hidden;
     border-radius: var(--radius);
 }
 
 .image-frame img {
-    display: block;
     width: 100%;
-    height: auto;
+    height: 100%;
+    display: block;
     object-fit: cover;
+    object-position: center;
 }
 
 .card {
@@ -333,7 +338,7 @@ textarea {
 .card-image {
     position: relative;
     width: 100%;
-    aspect-ratio: 16 / 10;
+    aspect-ratio: 4 / 3;
     overflow: hidden;
     background: #30363b;
 }
@@ -365,6 +370,14 @@ textarea {
     color: var(--red);
     font-weight: 900
 }
+
+
+/* Image focus helpers - apply these classes to individual <img> elements. */
+.focus-top { object-position: center 25% !important; }
+.focus-center { object-position: center !important; }
+.focus-bottom { object-position: center 75% !important; }
+.focus-left { object-position: 25% center !important; }
+.focus-right { object-position: 75% center !important; }
 
 .page-hero {
     padding: 68px 0 58px;
@@ -638,6 +651,17 @@ textarea {
 }
 
 @media(min-width:900px) {
+
+    .image-frame,
+    .card-image {
+        aspect-ratio: 16 / 10;
+    }
+
+    .hero-media img {
+        object-position: center 55%;
+    }
+
+
     .container {
         width: min(calc(100% - 48px), var(--max))
     }

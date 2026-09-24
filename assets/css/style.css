@@ -1,6 +1,6 @@
 :root {
-    --red: #c71928;
-    --red-dark: #97121d;
+    --red: #f58220;
+    --red-dark: #c95f0a;
     --ink: #101214;
     --grey: #697077;
     --soft: #f1f2f3;
@@ -190,7 +190,7 @@ textarea {
 
 .eyebrow,
 .section-kicker {
-    color: #ef9ca3;
+    color: #ffad66;
     text-transform: uppercase;
     letter-spacing: .15em;
     font-size: 11px;
@@ -293,7 +293,7 @@ textarea {
     position: relative;
     overflow: hidden;
     background:
-        linear-gradient(135deg, rgba(199, 25, 40, .3), transparent 45%),
+        linear-gradient(135deg, rgba(245, 130, 32, .3), transparent 45%),
         repeating-linear-gradient(135deg, #3d444a 0 18px, #30363b 18px 36px);
 }
 

@@ -986,6 +986,40 @@ textarea {
     max-width: 440px;
 }
 
+/*
+ * Power Link Holdings / Power Synergies identity.
+ * Kept separate from .brand-logo so navbar sizing is unaffected.
+ */
+.footer-group-brand {
+    display: inline-block;
+    width: fit-content;
+    max-width: 100%;
+    line-height: 0;
+}
+
+.footer-group-logo {
+    display: block;
+    width: clamp(190px, 20vw, 250px);
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: left center;
+    transition:
+        transform 180ms ease,
+        opacity 180ms ease;
+}
+
+.footer-group-brand:hover .footer-group-logo {
+    transform: translateY(-2px);
+    opacity: .92;
+}
+
+.footer-group-brand:focus-visible {
+    outline: 2px solid var(--red);
+    outline-offset: 6px;
+    border-radius: 4px;
+}
+
 .footer-description {
     max-width: 400px;
     margin-top: 20px;
@@ -1072,6 +1106,10 @@ textarea {
 
 @media (max-width: 639px) {
 
+    .footer-group-logo {
+        width: 200px;
+    }
+
     .footer-registration {
         margin-top: 20px;
     }
@@ -1085,3 +1123,112 @@ textarea {
     }
 }
 
+/* ========================================
+   COMPANY NETWORK / SERVICE DELIVERY
+======================================== */
+
+.company-network {
+    padding: 64px 0;
+}
+
+.company-network .section-head {
+    max-width: 760px;
+    margin-bottom: 36px;
+}
+
+.company-logo-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+}
+
+.company-logo-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 180px;
+    padding: 22px 28px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    transition:
+        transform 180ms ease,
+        border-color 180ms ease,
+        box-shadow 180ms ease;
+}
+
+.company-logo-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(245, 130, 32, 0.45);
+    box-shadow: 0 12px 30px rgba(16, 18, 20, 0.08);
+}
+
+.company-logo {
+    display: block;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+.company-logo-pce {
+    max-width: 72%;
+    max-height: 130px;
+}
+
+.company-logo-ps {
+    max-width: 88%;
+    max-height: 115px;
+}
+
+.company-logo-sat {
+    max-width: 94%;
+    max-height: 125px;
+}
+
+@media (min-width: 640px) {
+    .company-logo-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+    }
+
+    .company-logo-card {
+        min-height: 190px;
+        padding: 20px;
+    }
+}
+
+@media (min-width: 900px) {
+    .company-network {
+        padding: 72px 0;
+    }
+
+    .company-network .section-head {
+        margin-bottom: 40px;
+    }
+
+    .company-logo-grid {
+        gap: 24px;
+    }
+
+    .company-logo-card {
+        height: 220px;
+        min-height: 0;
+        padding: 22px;
+    }
+
+    .company-logo-pce {
+        max-width: 76%;
+        max-height: 165px;
+    }
+
+    .company-logo-ps {
+        max-width: 94%;
+        max-height: 150px;
+    }
+
+    .company-logo-sat {
+        max-width: 98%;
+        max-height: 155px;
+    }
+}

@@ -1106,8 +1106,16 @@ textarea {
 
 @media (max-width: 639px) {
 
+    .footer-group-brand {
+        display: block;
+        width: 100%;
+    }
+
     .footer-group-logo {
-        width: 200px;
+        width: min(100%, 340px);
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
     }
 
     .footer-registration {
